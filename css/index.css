@@ -158,10 +158,14 @@ body {
   color: rgb(163, 163, 163);
   font-weight: 600;
   line-height: 171%;
+  transition: all 1s ease 0s;
 }
 
 .menu__link:hover {
   text-decoration: underline;
+  color: white;
+  font-weight: 700;
+  transition: all 3s ease 0s;
 }
 @media (max-width: 479px) {
   .menu__link {
@@ -207,11 +211,18 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .main-block__title {
   font-size: 48px;
   line-height: 160%;
   font-weight: 800;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.main-block__title._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 @media (max-width: 767px) {
@@ -230,6 +241,15 @@ body {
   color: rgb(163, 163, 163);
   font-size: 20px;
   line-height: 150%;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.main-block__text._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.4s;
 }
 
 /* -----------------------------------personsSkill---------------------------------- */
@@ -246,6 +266,24 @@ body {
 .personalSkills__column {
   flex: 0 1 30%;
   margin: 0px 0px 30px 0px;
+  opacity: 0;
+}
+
+.personalSkills__column-colum1 {
+  transition: all 1s ease 0.2s;
+}
+.personalSkills__column-colum2 {
+  transition: all 1s ease 0.4s;
+}
+.personalSkills__column-colum3 {
+  transition: all 1s ease 0.6s;
+}
+.personalSkills__column-colum4 {
+  transition: all 1s ease 0.8s;
+}
+
+.personalSkills__column._active {
+  opacity: 1;
 }
 
 .personalSkills__column > * :not(:last-child) {
@@ -270,6 +308,12 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 -15px -30px;
+  }
+}
+
+@media (min-width: 670px) {
+  .personalSkills__body._active {
+    opacity: 1;
   }
 }
 
@@ -341,6 +385,21 @@ body {
   flex-wrap: wrap;
   margin: 0px -15px -30px;
   justify-content: center;
+  transition: all 0.8s ease 0s;
+  transform: rotateX(180deg) translate(-150%);
+
+  opacity: 0;
+}
+
+.softSkills__body._active {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px -30px;
+  justify-content: center;
+  transform: rotate(0) translate(0px, 0px);
+
+  transition: transform 1.5s;
+  opacity: 1;
 }
 
 .softSkills__column {
@@ -387,6 +446,16 @@ body {
   color: rgb(163, 163, 163);
 }
 
+.softSkills_icon:hover {
+  height: 130px;
+  padding: 30px 40px;
+  box-shadow: 0px 13px 19px #6b6b6b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 142px;
+  color: rgb(163, 163, 163);
+}
 /* -----------------Contacts-------------------------- */
 
 .conacts__body {
@@ -412,6 +481,13 @@ body {
 .conacts__items {
   padding: 15px 30px;
   box-shadow: 0px 13px 19px #6b6b6b;
+  transition: all 1s ease 0s;
+}
+
+.conacts__items:hover {
+  padding: 15px 40px;
+  box-shadow: 0px 23px 29px #6b6b6b;
+  transition: all 2s ease 0s;
 }
 
 .conacts_item {
